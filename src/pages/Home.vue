@@ -1,14 +1,28 @@
 <template>
   <div>
-    <h1>Home</h1>
-    <router-link to="/About">
-      <button class="bg-blue-500 text-white rounded p-2">Go to About</button>
-    </router-link>
+    <div class="flex space-x-2 m-2">
+      <h1 class="p-2 bg-blue-900 text-white rounded">Home</h1>
+      <router-link to="/about">
+        <button class="p-2 border-transparent rounded border border-transparent hover:border-blue-900">About</button>
+      </router-link>
+    </div>
+    <button class="m-2 rounded p-2 bg-green-200" @click="yoyo">Test axios</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  methods: {
+    yoyo() {
+      axios.get('/api/lorem')
+        .then((response) => {
+          console.log(response.data)
+        })
+        .catch((error) => {
+          console.error(error.data)
+        })
+    }
+  }
 };
 </script>
