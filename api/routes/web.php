@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/lorem', function () {
-    return ['ipsum' => 'dolor'];
+Route::get('/', function () {
+    return view('welcome');
 });
