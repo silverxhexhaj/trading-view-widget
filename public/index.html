@@ -1,17 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-center">
+        <div class="text-xl md:text-4xl font-bold py-16">
+          Trading View Widget
+        </div>
+      </div>
+      <ul class="pb-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        <li
+          style="height: 520px;"
+          class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+        >
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://www.tradingview.com/symbols/ETHUSDT/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"
+                  >Technical Analysis for ETHUSDT</span
+                ></a
+              >
+              by TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "BINANCE:ETHUSDT",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </li>
+        <li
+          style="height: 520px;"
+          class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+        >
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://www.tradingview.com/symbols/BTCUSDT/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"
+                  >Technical Analysis for BTCUSDT</span
+                ></a
+              >
+              by TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "BINANCE:BTCUSDT",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </li>
+      </ul>
+
+      <ul class="pb-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <li
+          style="height: 420px;"
+          class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+        >
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://www.tradingview.com/symbols/AXSUSDT/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"
+                  >Technical Analysis for AXSUSDT</span
+                ></a
+              >
+              by TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "BINANCE:AXSUSDT",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </li>
+        <li
+          style="height: 420px;"
+          class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+        >
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://www.tradingview.com/symbols/TLMUSDT/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"
+                  >Technical Analysis for TLMUSDT</span
+                ></a
+              >
+              by TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "BINANCE:TLMUSDT",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </li>
+        <li
+          style="height: 420px;"
+          class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+        >
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://www.tradingview.com/symbols/BNBUSDT/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"
+                  >Technical Analysis for BNBUSDT</span
+                ></a
+              >
+              by TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "BINANCE:BNBUSDT",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </li>
+        <li
+          style="height: 420px;"
+          class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+        >
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://www.tradingview.com/symbols/AAVEUSDT/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"
+                  >Technical Analysis for AAVEUSDT</span
+                ></a
+              >
+              by TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1D",
+                "width": "100%",
+                "isTransparent": true,
+                "height": "100%",
+                "symbol": "BINANCE:AAVEUSDT",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </li>
+
+        <!-- More people... -->
+      </ul>
+    </div>
   </body>
 </html>

@@ -1,52 +1,71 @@
 <template>
-    <div>
-        <div class="flex space-x-2 m-2">
-            <h1 class="p-2 bg-blue-900 text-white rounded">Home</h1>
-            <router-link to="/about">
-                <button class="p-2 border-transparent rounded border border-transparent hover:border-blue-900">About
-                </button>
-            </router-link>
-        </div>
-        <button class="m-2 rounded p-2 bg-blue-200 border hover:border-blue-700"
-                @click="testAxios">
-            Test axios
-        </button>
-        <span v-if="isSuccess === true"
-              class="font-bold text-green-600 text-xs">
-            Success
-        </span>
-        <span v-else-if="!isSuccess === false"
-              class="font-bold text-red-600 text-xs">
-            Error
-        </span>
-        <code v-if="responseData"
-             class="flex m-2 p-2 text-sm font-mono bg-gray-300 rounded">
-            {{ responseData }}
-        </code>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-center">
+      <div class="text-4xl font-bold py-16">
+        Trading View Widget
+      </div>
     </div>
+    <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <li
+        class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+      >
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a
+              href="https://www.tradingview.com/symbols/BTCUSDT/technicals/"
+              rel="noopener"
+              target="_blank"
+              ><span class="blue-text">Technical Analysis for BTCUSDT</span></a
+            >
+            by TradingView
+          </div>
+        </div>
+        <!-- TradingView Widget END -->
+      </li>
+      <li
+        class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+      >
+        2
+      </li>
+      <li
+        class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+      >
+        3
+      </li>
+      <li
+        class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+      >
+        4
+      </li>
+
+      <!-- More people... -->
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "Home",
-    data() {
-        return {
-            isSuccess: null,
-            responseData: null
-        }
-    },
-    methods: {
-        testAxios() {
-            axios.get('/api/lorem')
-                .then((response) => {
-                    this.responseData = response.data
-                    this.isSuccess = true
-                })
-                .catch((error) => {
-                    this.responseData = error.data
-                    this.isSuccess = false
-                })
-        }
-    }
+  name: "Home",
+  data() {
+    return {
+      interval: "1D",
+      width: "425",
+      isTransparent: true,
+      height: "450",
+      symbol: "BINANCE:BTCUSDT",
+      showIntervalTabs: true,
+      locale: "en",
+      colorTheme: "light"
+    };
+  },
+  mounted() {
+    let recaptchaScript = document.createElement('script')
+    recaptchaScript.setAttribute('src', 'https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js')
+    document.head.appendChild(recaptchaScript)
+  },
+  methods: {},
 };
 </script>
+
